@@ -29,7 +29,7 @@ permitting basic parsing and serialization of extended data types by *virtually 
 }
 ```
 
-## Using Extended Numeric Data Types
+## Recognizing and Processing Extended Numeric Data Types
 A remaining issue is how a JSON parser can know how to recognize and process
 extended numeric data types.  Fortunately, there are multiple solutions for that.
 Here is a programmatic variant (expressed in JavaScript) which is useful for *dynamic* JSON:
