@@ -38,7 +38,7 @@ Below is a programmatic variant (here expressed in JavaScript) which is useful f
 var obj = JSON.parse('{"giantNumber": "1.4e+9999"}');
 var biggie = new BigNumber(obj.giantNumber);
 ```
-In a *declarative* system, data types may be resolved automatically like in this Java sample:
+In a *declarative* system, data types are usually resolved automatically like in this Java sample:
 ```java
 class MyObject {
     String type;
