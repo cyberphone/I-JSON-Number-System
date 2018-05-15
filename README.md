@@ -21,7 +21,7 @@ The following JSON object highlights some of the issues with JSON numbers:
 
 ## Core Extension Mechanism
 Since I-JSON numbers are constrained by IEEE-754 double precision, extended number data
-types must be enclosed within double quotes, i.e. have JSON "string" syntax.
+types **must** be enclosed within double quotes, i.e. have JSON "string" syntax,
 permitting basic parsing and serialization of extended data types by *virtually any* JSON tool:
 ```json
 {
