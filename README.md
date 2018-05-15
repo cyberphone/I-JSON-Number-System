@@ -32,8 +32,8 @@ permitting basic parsing and serialization of extended data types by *virtually 
 ## Recognizing and Processing Extended Numeric Data Types
 A remaining issue is how a JSON parser can know how to recognize and process
 extended numeric data types.  Fortunately, there are multiple solutions for that.
-Below is a programmatic variant (here expressed in JavaScript) which is useful for processing
-*dynamic* JSON:
+Below is a *programmatic* variant (here expressed in JavaScript). relying on
+conventions between sender and receiver:
 ```javascript
 var obj = JSON.parse('{"giantNumber": "1.4e+9999"}');
 var biggie = new BigNumber(obj.giantNumber);
@@ -47,4 +47,11 @@ class MyObject {
  ```
     
 ## Extended Numeric Data Types
-Table TBD...
+<table>
+  <tr><th>Type</th><th>Description</th><th>Range</th><th>Syntax</th></tr>
+  <tr><td>Long</td><td>Signed 64-bit integer</td><td>-9223372036854775808 to 9223372036854775807</td><td>0|-?[1-9][0-9]*</td></tr>
+  <tr><td>Ulong</td><td>Unsigned 64-bit integer</td><td>0 to 18446744073709551615</td><td>0|[1-9][0-9]*</td></tr>
+  <tr><td>BigInteger</td><td>Arbitrary large signed integer</td><td>-X to X</td><td>0|-?[1-9][0-9]*</td></tr>
+  <tr><td>Money</td><td>Decimal number expressing money</td><td>-X to X</td><td>-?[0-9]+\.[0-9]+</td></tr>
+</table>
+To be continued...
