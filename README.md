@@ -33,7 +33,7 @@ permitting basic parsing and serialization of extended data types by *virtually 
 A remaining issue is how a JSON parser can know how to recognize and process
 extended numeric data types.  Fortunately, there are multiple solutions for that.
 Below is a *programmatic* variant (here expressed in JavaScript). relying on
-conventions between sender and receiver:
+name conventions between sender and receiver:
 ```javascript
 var obj = JSON.parse('{"giantNumber": "1.4e+9999"}');
 var biggie = new BigNumber(obj.giantNumber);
@@ -48,10 +48,14 @@ class MyObject {
     
 ## Extended Numeric Data Types
 <table>
-  <tr><th>Type</th><th>Description</th><th>Range</th><th>Syntax</th></tr>
-  <tr><td>Long</td><td>Signed 64-bit integer</td><td>-9223372036854775808 to 9223372036854775807</td><td>0|-?[1-9][0-9]*</td></tr>
-  <tr><td>Ulong</td><td>Unsigned 64-bit integer</td><td>0 to 18446744073709551615</td><td>0|[1-9][0-9]*</td></tr>
-  <tr><td>BigInteger</td><td>Arbitrary large signed integer</td><td>-X to X</td><td>0|-?[1-9][0-9]*</td></tr>
-  <tr><td>Money</td><td>Decimal number expressing money</td><td>-X to X</td><td>-?[0-9]+\.[0-9]+</td></tr>
+  <tr><th>Type</th><th>Description</th><th>Range</th><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JSON&nbsp;Syntax&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th></tr>
+  <tr><td><b>Long</b></td><td>Signed 64-bit integer</td><td>-9223372036854775808 to 9223372036854775807</td><td>0|-?[1-9][0-9]*</td></tr>
+  <tr><td><b>Ulong</b></td><td>Unsigned 64-bit integer</td><td>0 to 18446744073709551615</td><td>0|[1-9][0-9]*</td></tr>
+  <tr><td><b>BigInteger</b></td><td>Arbitrary large signed integer</td><td>-<i>Arbitrary</i> to <i>Arbitrary</i></td><td>0|-?[1-9][0-9]*</td></tr>
+  <tr><td><b>Money</b></td><td>Decimal number expressing money</td><td>-<i>Sufficient</i> to<i> Sufficient</i></td><td>-?[1-9][0-9]*\.[0-9]+</td></tr>
+  <tr><td><b>BigDecimal</b></td><td>Arbitrary large decimal number</td><td>-<i>Arbitrary</i> to <i>Arbitrary</td><td>-?[0-9]+(\.[0-9]+)?(e(-|\+)[0-9]+)?</td></tr>
 </table>
-To be continued...
+
+\* Minus the double quotes.
+
+*Sufficient* denotes earthly monetary sums.
