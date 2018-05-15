@@ -59,3 +59,5 @@ class MyObject {
 \* Minus the double quotes.
 
 *Sufficient* denotes earthly monetary sums.
+
+V0.1
