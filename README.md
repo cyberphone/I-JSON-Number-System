@@ -2,7 +2,7 @@
 
 *I-JSON [[RFC7493](https://tools.ietf.org/html/rfc7493)] defines rules which enable
 interoperability between between different implementations. Although useful, 
-many applications depend on numeric data which currently is dealt with in 
+many applications depend on extended numeric data which currently is dealt with in 
 non-standard ways. This document describes some of the more common variants,
 with the goal of eventually establishing some kind of standard, be it de-facto or real.*
 
@@ -45,4 +45,5 @@ class MyObject {
  }
  ```
     
-
+## Extended Numeric Data Types
+Table TBD...
