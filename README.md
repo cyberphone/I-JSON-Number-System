@@ -60,4 +60,20 @@ class MyObject {
 
 *Sufficient* denotes earthly monetary sums.
 
-V0.1
+## Existing Solutions
+It might be of some use looking into some existing solutions.
+
+### Java JSON-P
+JSON-P currently uses *Adaptive Notation* where the actual value determines if it is to be serialized as a JSON Number or be embedded in a JSON String:
+```json
+{
+  "BigDecimal.large":"1E+999",
+  "BigDecimal.small":1,
+  "BigInteger.large":"1787787787877878787878787878787",
+  "BigInteger.small":1,
+  "Long.large":9223372036854775807,
+  "Long.small":1
+}
+```
+
+V0.11
