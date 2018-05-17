@@ -52,8 +52,8 @@ class MyObject {
   <tr><td><b>Long</b></td><td>Signed 64-bit integer</td><td>-9223372036854775808 to 9223372036854775807</td><td>0|-?[1-9][0-9]*</td></tr>
   <tr><td><b>Ulong</b></td><td>Unsigned 64-bit integer</td><td>0 to 18446744073709551615</td><td>0|[1-9][0-9]*</td></tr>
   <tr><td><b>BigInteger</b></td><td>Arbitrary large signed integer</td><td>-<i>Arbitrary</i> to <i>Arbitrary</i></td><td>0|-?[1-9][0-9]*</td></tr>
-  <tr><td><b>Money</b></td><td>Decimal number expressing money</td><td>-<i>Sufficient</i> to<i> Sufficient</i></td><td>-?[1-9][0-9]*\.[0-9]+</td></tr>
   <tr><td><b>BigDecimal</b></td><td>Arbitrary large decimal number</td><td>-<i>Arbitrary</i> to <i>Arbitrary</td><td>-?[0-9]+(\.[0-9]+)?(e(-|\+)[0-9]+)?</td></tr>
+  <tr><td><b>Money</b></td><td>Decimal number expressing money</td><td>-<i>Sufficient</i> to<i> Sufficient</i></td><td>-?[1-9][0-9]*\.[0-9]+</td></tr>
 </table>
 
 \* Minus the double quotes.
@@ -61,7 +61,7 @@ class MyObject {
 *Sufficient* denotes earthly monetary sums.
 
 ## Existing Solutions
-It might be of some use looking into some existing solutions.
+A few existing solutions have been investigated.
 
 ### Java JSON-P
 JSON-P currently uses *Adaptive Notation* where the actual value determines if it is to be serialized as a JSON Number or be embedded in a JSON String:
@@ -75,5 +75,7 @@ JSON-P currently uses *Adaptive Notation* where the actual value determines if i
   "Long.small":1
 }
 ```
+This scheme is with the exception of "Long.large" compatible with `JSON.parse()`;
+
 
 V0.11
