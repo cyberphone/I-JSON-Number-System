@@ -92,6 +92,17 @@ The defaults are:
 ```
 This is not compliant with `JSON.parse()`;
 
+### W3C Payment Request
+The payment request API defines a monetary amount as:
+```WebIDL
+dictionary PaymentCurrencyAmount {
+    required DOMString currency;
+    required DOMString value;
+};
+```
+where `value` is a decimal number.  The `DOMString` declarator means that the value is
+to be expressed as a JSON/JavaScript string.
+
 ### Twitter
 The Tweet Object shows the downside of not having a unified way of dealing with big numbers:
 ```json
