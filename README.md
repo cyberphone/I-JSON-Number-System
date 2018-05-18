@@ -63,8 +63,8 @@ class MyObject {
 ## Existing Solutions
 A few existing solutions have been investigated.
 
-### Java JSON-P
-JSON-P currently uses *Adaptive Notation* where the actual value determines if it is to be serialized as a 
+### Java JSON-B
+JSON-B currently uses *Adaptive Notation* where the actual value determines if it is to be serialized as a 
 JSON Number or be embedded in a JSON String:
 ```json
 {
