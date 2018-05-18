@@ -77,6 +77,21 @@ JSON-P currently uses *Adaptive Notation* where the actual value determines if i
 ```
 This scheme is with the exception of "Long.large" compatible with `JSON.parse()`;
 
+### Json.NET
+It doesn't seem to be any global option governing number serialization.
+The defaults are:
+```
+{
+  "BigInteger.large": 878787878787878787878787878787,
+  "BigInteger.small": 1,
+  "Decimal.large": 3777777447789999999445.678997,
+  "Decimal.small": 1.0,
+  "Long.large": 9223372036854775807,
+  "Long.small": 1
+}
+```
+This is not compliant with `JSON.parse()`;
+
 ### Twitter
 The Tweet Object shows the downside of not having a unified way of dealing with big numbers:
 ```json
