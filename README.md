@@ -64,7 +64,8 @@ class MyObject {
 A few existing solutions have been investigated.
 
 ### Java JSON-P
-JSON-P currently uses *Adaptive Notation* where the actual value determines if it is to be serialized as a JSON Number or be embedded in a JSON String:
+JSON-P currently uses *Adaptive Notation* where the actual value determines if it is to be serialized as a 
+JSON Number or be embedded in a JSON String:
 ```json
 {
   "BigDecimal.large":"1E+999",
@@ -101,7 +102,7 @@ dictionary PaymentCurrencyAmount {
 };
 ```
 where `value` is a decimal number.  The `DOMString` declarator means that the value is
-to be expressed as a JSON/JavaScript string.
+to be expressed as a JSON/ECMAScript String.
 
 ### Open Banking UK
 The following JSON extract from the Open Banking API shows that monetary
