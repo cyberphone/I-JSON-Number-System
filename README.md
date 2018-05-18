@@ -93,7 +93,7 @@ The defaults are:
 This is not compliant with `JSON.parse()`;
 
 ### W3C Payment Request
-The payment request API defines a monetary amount as:
+The payment request API defines a monetary amount as
 ```WebIDL
 dictionary PaymentCurrencyAmount {
     required DOMString currency;
