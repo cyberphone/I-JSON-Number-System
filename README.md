@@ -81,7 +81,7 @@ This scheme is with the exception of "Long.large" compatible with `JSON.parse()`
 ### Json.NET
 Json.NET doesn't seem to have any global option governing number serialization.
 The defaults are:
-```
+```json
 {
   "Decimal.large": 3777777447789999999445.678997,
   "Decimal.small": 1.0,
