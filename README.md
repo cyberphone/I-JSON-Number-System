@@ -20,8 +20,8 @@ The following JSON object highlights some of the issues with JSON numbers:
 - `int64Max` parses in all JSON systems but *loses precision* using ECMAScript's `JSON.parse()`
 
 ## Core Extension Mechanism
-Since I-JSON numbers are constrained by IEEE-754 double precision, extended number data
-types **must** be enclosed within double quotes, i.e. have JSON "string" syntax,
+Since I-JSON numbers are constrained by IEEE-754 double precision, extended numeric data
+types **must** in this specification be enclosed within double quotes, i.e. have JSON "string" syntax,
 permitting basic parsing and serialization of extended data types by *virtually any* JSON tool:
 ```json
 {
@@ -77,5 +77,18 @@ JSON-P currently uses *Adaptive Notation* where the actual value determines if i
 ```
 This scheme is with the exception of "Long.large" compatible with `JSON.parse()`;
 
+### Twitter
+The Tweet Object shows the downside of not having a unified way of dealing with big numbers:
+```json
+{
+  "created_at": "Thu Apr 06 15:24:15 +0000 2017",
+  "id": 850006245121695744,
+  "id_str": "850006245121695744",
+  "text": "This is what I'm saying :-)",
+  "user": {},  
+  "entities": {}
+}
+```
 
-V0.11
+
+V0.12
