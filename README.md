@@ -21,7 +21,7 @@ The following JSON object highlights some of the issues with JSON numbers:
 
 ## Core Extension Mechanism
 Since I-JSON numbers are constrained by IEEE-754 double precision, extended numeric data
-types **must** in this specification be enclosed within double quotes, i.e. have JSON "string" syntax,
+types **must** in this specification be enclosed within double quotes, i.e. have JSON String syntax,
 permitting basic parsing and serialization of extended data types by *virtually any* JSON tool:
 ```json
 {
@@ -93,7 +93,7 @@ The defaults are:
 This is not compliant with `JSON.parse()`;
 
 ### W3C Payment Request
-The payment request API defines a monetary amount as
+The W3C Payment Request API defines a monetary amount as
 ```WebIDL
 dictionary PaymentCurrencyAmount {
     required DOMString currency;
