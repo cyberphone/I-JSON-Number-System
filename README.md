@@ -103,6 +103,16 @@ dictionary PaymentCurrencyAmount {
 where `value` is a decimal number.  The `DOMString` declarator means that the value is
 to be expressed as a JSON/JavaScript string.
 
+### Open Banking UK
+The following JSON extract from the Open Banking API shows that monetary
+amounts are expressed as decimal numbers enclosed in strings:
+```json
+{
+  "amount": "259.99",
+  "currency": "GBP"
+}
+```
+
 ### Twitter
 The Tweet Object shows the downside of not having a unified way of dealing with big numbers:
 ```json
