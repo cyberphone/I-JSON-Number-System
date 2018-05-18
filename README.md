@@ -32,7 +32,7 @@ permitting basic parsing and serialization of extended data types by *virtually 
 ## Recognizing and Processing Extended Numeric Data Types
 A remaining issue is how a JSON parser can know how to recognize and process
 extended numeric data types.  Fortunately, there are multiple solutions for that.
-Below is a *programmatic* variant (here expressed in JavaScript). relying on
+Below is a *programmatic* variant (here expressed in ECMAScript). relying on
 name conventions between sender and receiver:
 ```javascript
 var obj = JSON.parse('{"giantNumber": "1.4e+9999"}');
