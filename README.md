@@ -68,12 +68,12 @@ JSON-P currently uses *Adaptive Notation* where the actual value determines if i
 JSON Number or be embedded in a JSON String:
 ```json
 {
-  "BigDecimal.large":"1E+999",
-  "BigDecimal.small":1,
-  "BigInteger.large":"1787787787877878787878787878787",
-  "BigInteger.small":1,
-  "Long.large":9223372036854775807,
-  "Long.small":1
+  "BigDecimal.large": "1E+999",
+  "BigDecimal.small": 1,
+  "BigInteger.large": "1787787787877878787878787878787",
+  "BigInteger.small": 1,
+  "Long.large": 9223372036854775807,
+  "Long.small": 1
 }
 ```
 This scheme is with the exception of "Long.large" compatible with `JSON.parse()`;
