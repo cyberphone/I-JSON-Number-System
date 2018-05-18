@@ -78,7 +78,7 @@ JSON-P currently uses *Adaptive Notation* where the actual value determines if i
 This scheme is with the exception of "Long.large" compatible with `JSON.parse()`;
 
 ### Json.NET
-It doesn't seem to be any global option governing number serialization.
+Json.NET doesn't seem to have any global option governing number serialization.
 The defaults are:
 ```
 {
