@@ -83,10 +83,10 @@ Json.NET doesn't seem to have any global option governing number serialization.
 The defaults are:
 ```
 {
-  "BigInteger.large": 240777489003222785532321,
-  "BigInteger.small": 1,
   "Decimal.large": 3777777447789999999445.678997,
   "Decimal.small": 1.0,
+  "BigInteger.large": 240777489003222785532321,
+  "BigInteger.small": 1,
   "Long.large": 9223372036854775807,
   "Long.small": 1
 }
