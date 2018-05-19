@@ -93,6 +93,10 @@ The defaults are:
 ```
 This is not compliant with `JSON.parse()`;
 
+### bignumber.js
+The NPM https://www.npmjs.com/package/bignumber.js relies on 
+strings for BigNumber JSON serialization and parsing.
+
 ### W3C Payment Request
 The W3C Payment Request API defines a monetary amount as
 ```WebIDL
